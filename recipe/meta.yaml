@@ -1,6 +1,6 @@
 {% set name = "preshed" %}
-{% set version = "0.46.4" %}
-{% set sha256sum = "96f0ca6a0aa1347312fbe76bf55949a378b225f6a2b543eb2671208c87aabbfd" %}
+{% set version = "1.0.0" %}
+{% set sha256sum = "a6b3a9e34634600e3e410ec25e0debed4b65a47eb37514a063d189d1c425b4dd" %}
 
 package:
   name: {{ name }}
