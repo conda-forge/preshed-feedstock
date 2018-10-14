@@ -1,6 +1,6 @@
 {% set name = "preshed" %}
-{% set version = "1.0.1" %}
-{% set sha256sum = "7b99ace606143a922163a7ff7ad4969b296288f5b20b9c9bda328caec3b92f71" %}
+{% set version = "2.0.1" %}
+{% set sha256sum = "dae01c74313965c487e0ec839e5f28d0c7df9bfd1d978aa5bada3f72ff20a9e5" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256sum }}
 
 build:
-  number: 1000
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
   skip: True  # [win32 or linux32]
 
