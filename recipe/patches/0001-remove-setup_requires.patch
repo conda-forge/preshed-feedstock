@@ -1,0 +1,24 @@
+From 2caf717413747425307e576193ababd4b572b5d1 Mon Sep 17 00:00:00 2001
+From: "H. Vetinari" <h.vetinari@gmx.com>
+Date: Thu, 27 Jun 2019 09:21:43 +0200
+Subject: [PATCH] remove setup_requires
+
+---
+ setup.py | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 83ace9c..c32f354 100755
+--- a/setup.py
++++ b/setup.py
+@@ -124,7 +124,6 @@ def setup_package():
+             url=about['__uri__'],
+             license=about['__license__'],
+             ext_modules=ext_modules,
+-            setup_requires=['wheel>=0.32.0,<0.33.0'],
+             install_requires=['cymem>=2.0.2,<2.1.0'],
+             classifiers=[
+                 'Environment :: Console',
+-- 
+2.21.0.windows.1
+
