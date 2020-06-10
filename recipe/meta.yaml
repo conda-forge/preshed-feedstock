@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256sum }}
 
 build:
-  number: 2
+  number: 3
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   skip: True  # [win32 or linux32]
 
@@ -50,3 +50,6 @@ extra:
   recipe-maintainers:
     - rmax
     - h-vetinari
+    - ines
+    - honnibal
+    - adrianeboyd
