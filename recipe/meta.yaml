@@ -1,6 +1,6 @@
 {% set name = "preshed" %}
-{% set version = "3.0.2" %}
-{% set sha256sum = "61d73468c97c1d6d5a048de0b01d5a6fd052123358aca4823cdb277e436436cb" %}
+{% set version = "3.0.3" %}
+{% set sha256sum = "8ad47d5d2688fabc66850f32c7b6d3b4a97e6b653726309fe09603edd6fceb23" %}
 
 package:
   name: {{ name }}
@@ -12,9 +12,9 @@ source:
   sha256: {{ sha256sum }}
 
 build:
-  number: 4
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  skip: True  # [win32 or linux32]
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: true  # [win32 or linux32]
 
 requirements:
   build:
