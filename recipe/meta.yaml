@@ -35,8 +35,12 @@ requirements:
     - murmurhash >=0.28.0,<1.1.0
 
 test:
+  requires:
+    - pytest
   imports:
     - {{ name }}
+  commands:
+    - python -m pytest --tb=native --pyargs {{ name }}
 
 about:
   home: https://github.com/explosion/preshed
