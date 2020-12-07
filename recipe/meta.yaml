@@ -1,6 +1,6 @@
 {% set name = "preshed" %}
-{% set version = "3.0.4" %}
-{% set sha256sum = "13a779205d55ce323976ac06df597f9ec2d6f0563ebcf5652176cf4520c7d540" %}
+{% set version = "3.0.5" %}
+{% set sha256sum = "c6d3dba39ed5059aaf99767017b9568c75b2d0780c3481e204b1daecde00360e" %}
 
 package:
   name: {{ name }}
@@ -22,6 +22,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - cymem >=2.0.2,<2.1.0
+    - murmurhash >=0.28.0,<1.1.0
     - cython
     - msinttypes  # [win and py<35]
     - pip
