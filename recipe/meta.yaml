@@ -60,6 +60,4 @@ extra:
   recipe-maintainers:
     - rmax
     - h-vetinari
-    - ines
-    - honnibal
-    - adrianeboyd
+    - conda-forge/spacy
