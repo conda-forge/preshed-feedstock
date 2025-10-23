@@ -1,6 +1,6 @@
 {% set name = "preshed" %}
-{% set version = "3.0.9" %}
-{% set sha256sum = "721863c5244ffcd2651ad0928951a2c7c77b102f4e11a251ad85d37ee7621660" %}
+{% set version = "3.0.10" %}
+{% set sha256sum = "5a5c8e685e941f4ffec97f1fbf32694b8107858891a4bc34107fac981d8296ff" %}
 
 package:
   name: {{ name }}
@@ -8,11 +8,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256sum }}
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [win32 or linux32]
 
