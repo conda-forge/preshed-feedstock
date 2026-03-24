@@ -1,20 +1,16 @@
-{% set name = "preshed" %}
-{% set version = "3.0.12" %}
-{% set sha256sum = "b73f9a8b54ee1d44529cc6018356896cff93d48f755f29c134734d9371c0d685" %}
+{% set version = "3.0.13" %}
 
 package:
-  name: {{ name }}
+  name: preshed
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256sum }}
+  url: https://pypi.org/packages/source/p/preshed/preshed-{{ version }}.tar.gz
+  sha256: d75f718bbfd97e992f7827e0fa7faf6a91bdd9c922d5baa4b50d62731396cb89
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [win32 or linux32]
 
 requirements:
   build:
@@ -28,7 +24,6 @@ requirements:
     - cymem >=2.0.2,<2.1.0
     - murmurhash >=0.28.0,<1.1.0
     - cython
-    - msinttypes  # [win and py<35]
     - pip
     - python
     - setuptools
@@ -43,9 +38,9 @@ test:
   requires:
     - pytest
   imports:
-    - {{ name }}
+    - preshed
   commands:
-    - python -m pytest --tb=native --pyargs {{ name }}
+    - python -m pytest --tb=native --pyargs preshed
 
 about:
   home: https://github.com/explosion/preshed
