@@ -14,7 +14,6 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [win32 or linux32]
 
 requirements:
   build:
@@ -28,7 +27,6 @@ requirements:
     - cymem >=2.0.2,<2.1.0
     - murmurhash >=0.28.0,<1.1.0
     - cython
-    - msinttypes  # [win and py<35]
     - pip
     - python
     - setuptools
